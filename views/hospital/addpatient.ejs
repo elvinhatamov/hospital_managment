@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+<form action="/patient/create" method="POST">
+ <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Placeholder"  type="text" class="validate" name="firstName">
+          <label for="firstName">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input  type="text" class="validate" name="lastName">
+          <label for="lastName">Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input  type="email" class="validate" name="email">
+          <label for="disabled">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate" name="password">
+          <label for="password">Password</label>
+        </div>
+        <div class="row">
+        <div class="input-field col s12">
+          <input  type="text" class="validate" name="medicalRecordNumber">
+          <label for="medicalRecordNumber">Medical Record Number</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate" name="email">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <button type="submit" >Submit</button>
+    </form>
+  </div>
+        
+</body>
+</html>

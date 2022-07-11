@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HMP</title>
+    <%- include('../partials/head') %>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <header><%- include('../partials/header') %></header>
+    <a href="/admin/patient/create">Add Patient</a>
+    <main>
+      <tbody>
+        <% patients.forEach(function(m) { %>
+        <ul>
+          <li><%= m.firstName %></li>
+          <li><%= m.lastName %></li>
+         
+          <li><a href="patient/<%= m._id %>">DETAILS</a></li>
+        </ul>
+        <% }); %>
+      </tbody>
+
+      <ul>
+        <li></li>
+      </ul>
+    </main>
+    <footer><%- include('../partials/footer') %></footer>
+  </body>
+</html>

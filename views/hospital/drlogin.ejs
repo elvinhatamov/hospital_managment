@@ -1,0 +1,30 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Materialize CSS Framework -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="/public/stylesheets/materialize.css" />
+  <!-- JavaScript for Materialize -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<!------ Include the above in your HEAD tag ---------->
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+<form class="row g-3" method="POST" action="badge">
+  <div class="col-auto">
+    <label for="inputPassword2" name="badgeNumber" >Badge Number</label>
+    <input type="text" class="form-control" id="inputPassword2" placeholder="Badge Number" name="badgeNumber">
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+  </div>
+</form>
+<form action="patient/medicalRecordNumber" method="POST">
+ <ul class="collection">
+  <li><% patients.forEach(e => { %>
+   <li>Name:<%= patients.firstName %> last:<%= patients.lastName %></li>
+  <% }) %></li>
+ </ul>
+</form>
+
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </div>
+</div>

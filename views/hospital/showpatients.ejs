@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Materialize CSS Framework -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="/public/stylesheets/materialize.css" />
+    <!-- JavaScript for Materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="/:id" method="POST">
+      <table>
+        <thead>
+          <tr>
+              <th>Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>Medical Record Number</th>
+              <!-- <th>Result</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= patients.firstName %> </td>
+            <td><%= patients.lastName %> </td>
+            <td><%= patients.email %> </td>
+            <td><%= patients.medicalRecordNumber %> </td>
+            <td><a href= "/admin/patient/<%= patients._id %>/update">Update</a></td>
+            <form action="admin/patient/id" method="POST">
+            <td><button class="btn" type="submit">Delete</button></td>
+            </form>
+          </tr>
+          </tr>
+        </tbody>
+      </table>
+  </body>
+</html>
